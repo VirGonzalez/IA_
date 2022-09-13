@@ -1,0 +1,14 @@
+1.2 () Write down the set of coupled linear equations, analogous to (1.122), satisfied
+by the coefficients wi which minimize the regularized sum-of-squares error function
+given by (1.4)
+
+link : https://cimentadaj.github.io/ml_socsci/regularization.html
+
+library(tidymodels)
+library(tidyflow)
+
+data_link <- "https://raw.githubusercontent.com/cimentadaj/ml_socsci/master/data/pisa_us_2018.csv"
+pisa <- read.csv(data_link)
+
+
+
