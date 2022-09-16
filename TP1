@@ -79,7 +79,7 @@ fruit is removed from the box (with equal probability of selecting any of the it
 the box), then what is the probability of selecting an apple? If we observe that the
 selected fruit is in fact an orange, what is the probability that it came from the green
 box?
-
+p(x) = p(x/r)*p(r) + p(x/b)*p(b) + p(x/g)*p(g)
 p(apple) = p(apple/r)*p(r) + p(apple/b)*p(b) + p(apple/g)*p(g)
 p(apple) = 3/22*0.2 + 1/22*0.2 + 3/22*0.6
 p(apple) = 0.34
@@ -108,6 +108,7 @@ ln2pi = 1.83787706641
 ln(px|µ, σ2) = − 1/2σ2*suma(xn − µ)2 + N/2lnσ2 - N/2*ln2pi
 0 = − 1/2σ2 (xn2 - 2xnu + u2) + Nlnσ2 - 1/2*N*1.83787706641
 
+###PREGUNTAR A QUE SE REFIERE CON MAXIMIZAR RESPECTO DE ???
 
 1.21 ( ) Consider two nonnegative numbers a and b, and show that, if a =< b, then
 a =< sqrt((ab)). 
