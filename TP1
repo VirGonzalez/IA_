@@ -196,18 +196,24 @@ plt.plot(range, p(range))
 plt.plot(range, q(range))
 
 #divergencia entre una distribucion normal y no normal (segunda no normal)
+def p(x):
+    return norm.pdf(x, 2, 2)
+    
 def q(x):
     return norm.pdf(x, 5, 4)
 range = np.arange(-10, 10, 0.001)
 
 KL_int, err = quad(KL, -10, 10) 
-print( 'KL: ', KL_int ) = 
+print( 'KL: ', KL_int ) =  1.0994021254702657
 
 #divergencia entre una distribucion primera no normal ç
 def p(x):
     return norm.pdf(x, 5, 4)
     
+def q(x):
+    return norm.pdf(x, 2, 2)
+    
 range = np.arange(-10, 10, 0.001)
 
 KL_int, err = quad(KL, -10, 10) 
-print( 'KL: ', KL_int ) = 
+print( 'KL: ', KL_int ) = 0.8362423421891381
