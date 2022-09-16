@@ -153,6 +153,8 @@ sum(rel_entr(P,S)) = 0
 
 
 ###Segunda opcion mas automatica. Link: https://www.moonbooks.org/Articles/How-to-calculate-and-visualize-Kullback-Leibler-divergence-using-python-/
+#divergencia KL entre dos distribuciones normales 
+
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.mlab as mlab
@@ -193,5 +195,10 @@ ax.text(4.5, 0.17, 'q(x)', horizontalalignment='center',fontsize=17)
 plt.plot(range, p(range))
 plt.plot(range, q(range))
 
+#divergencia entre una distribucion normal y no normal
+def q(x):
+    return norm.pdf(x, 5, 4)
+range = np.arange(-10, 10, 0.001)
 
-
+KL_int, err = quad(KL, -10, 10) 
+print( 'KL: ', KL_int )
