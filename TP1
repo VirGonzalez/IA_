@@ -174,7 +174,7 @@ def KL(x):
 range = np.arange(-10, 10, 0.001)
 
 KL_int, err = quad(KL, -10, 10) 
-print( 'KL: ', KL_int )
+print( 'KL: ', KL_int ) = 0.4999997133484283
 
 fig = plt.figure(figsize=(18, 8), dpi=100)
 
@@ -195,10 +195,19 @@ ax.text(4.5, 0.17, 'q(x)', horizontalalignment='center',fontsize=17)
 plt.plot(range, p(range))
 plt.plot(range, q(range))
 
-#divergencia entre una distribucion normal y no normal
+#divergencia entre una distribucion normal y no normal (segunda no normal)
 def q(x):
     return norm.pdf(x, 5, 4)
 range = np.arange(-10, 10, 0.001)
 
 KL_int, err = quad(KL, -10, 10) 
-print( 'KL: ', KL_int )
+print( 'KL: ', KL_int ) = 
+
+#divergencia entre una distribucion primera no normal ç
+def p(x):
+    return norm.pdf(x, 5, 4)
+    
+range = np.arange(-10, 10, 0.001)
+
+KL_int, err = quad(KL, -10, 10) 
+print( 'KL: ', KL_int ) = 
