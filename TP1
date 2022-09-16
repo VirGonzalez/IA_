@@ -79,3 +79,24 @@ the box), then what is the probability of selecting an apple? If we observe that
 selected fruit is in fact an orange, what is the probability that it came from the green
 box?
 
+p(apple) = p(apple/r)*p(r) + p(apple/b)*p(b) + p(apple/g)*p(g)
+p(apple) = 3/10*0.2 + /2*0.2 + 3/10*0.6
+p(apple) = 0.34
+
+1.5 () Using the definition (1.38) show that var[f(x)] satisfies (1.39)
+
+var[f] = E(f(x) − E[f(x)])2	
+var[f] =  E(f(x))2 - 2E[f(x)*E(fx)]+(E[f(x)])2
+var[f] = E(f(x))2  -  2E(f(x))*E(fx) +(E[f(x)])2
+var[f] = E(f(x))2  -  2E[f(x)]2 + E[f(x)]2
+var[f] = E(f(x))2  - E[f(x)]2
+
+
+1.6 () Show that if two variables x and y are independent, then their covariance is
+zero
+
+ρXY= σXY/(σXσY)
+
+Si las variables son independientes entonces σXY = 0 , es decir la probabilidad de variacion en conjunto es cero
+
+
