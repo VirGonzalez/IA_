@@ -108,3 +108,24 @@ ln(px|µ, σ2) = − 1/2σ2*suma(xn − µ)2 + N/2lnσ2 - N/2*ln2pi
 0 = − 1/2σ2 (xn2 - 2xnu + u2) + Nlnσ2 - 1/2*N*1.83787706641
 
 
+1.21 ( ) Consider two nonnegative numbers a and b, and show that, if a =< b, then
+a =< sqrt((ab)). 
+
+Use this result to show that, if the decision regions of a two-class
+classification problem are chosen to minimize the probability of misclassification,
+this probability will satisfy
+a = 2 b = 5
+
+a = raiz(10)
+a = 3.16
+
+p(mistake) =< raiz({p(x, C1)p(x, C2)})dx
+
+Entonces si a es x en c1 y b es la probabilidad de x en c2 el producto de ambas aplicada la raiz siempre sera menor. 
+
+1.30 ( ) Evaluate the Kullback-Leibler divergence (1.113) between two Gaussians
+p(x) = N (x|µ, σ2) and q(x) = N (x|m, s2)
+
+
+
+
