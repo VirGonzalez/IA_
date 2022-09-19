@@ -103,10 +103,10 @@ Si las variables son independientes entonces σXY = 0 , es decir la probabilidad
 1.11 () By setting the derivatives of the log likelihood function (1.54) with respect to µ
 and σ2 equal to zero, verify the results (1.55) and (1.56).
 
-ln2pi = 1.83787706641
 
-ln(px|µ, σ2) = − 1/2σ2*suma(xn − µ)2 + N/2lnσ2 - N/2*ln2pi
-0 = − 1/2σ2 (xn2 - 2xnu + u2) + Nlnσ2 - 1/2*N*1.83787706641
+
+
+
 
 ###PREGUNTAR A QUE SE REFIERE CON MAXIMIZAR RESPECTO DE ???
 
