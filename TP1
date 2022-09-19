@@ -2,75 +2,8 @@
 by the coefficients wi which minimize the regularized sum-of-squares error function
 given by (1.4)
 
-link :https://rpubs.com/rpizarro/593184#:~:text=La%20Regresi%C3%B3n%20Polinomial%20es%20un,utiliza%20tres%20variables%2C%20como%20predictores.
-      https://www.pluralsight.com/guides/linear-lasso-and-ridge-regression-with-r
-library(MASS)
-library(tidyverse) 
-library(ggplot2)
-library(knitr)
-data("Boston")
-datos <- Boston
 
-##Use esta pagina para obtener un modelo random 
-#entreno el modelo
-set.seed(100) 
 
-index = sample(1:nrow(datos), 0.7*nrow(datos)) 
-
-train = datos[index,] # Create the training data 
-test = datos[-index,] # Create the test data
-
-dim(train)
-dim(test)
-
-cols = c('medv', 'lstat' )
-library(caret)
-pre_proc_val <- preProcess(train[,cols], method = c("center", "scale"))
-
-train[,cols] = predict(pre_proc_val, train[,cols])
-test[,cols] = predict(pre_proc_val, test[,cols])
-
-summary(train)
-#uso esos datos de entrenamiento para hacer el modelo polinomico
-
-modelo.pol2 <- lm(formula = medv ~ lstat, data = datos) ##hago un polinomio de grado 9
-
-coeficientes (w) = (22.532806, -152.459549,  64.227239, -27.051098, 25.451732 , -19.252418 , 6.508753 ,  1.941637, -6.729879, 8.416820 )
-
-Regularizacion por medio de una ridge regression (suma de cuadrados de los coeficientes)
-
-Trata de minimizar la suma de cuadrados de los residuos (https://www.statology.org/ridge-regression-in-r/)
-              RSS = Σ(yi – ŷi)2
-library(glmnet)
-
-library(glmnet)
-cols_reg = c('medv', 'lstat')
-
-dummies <- dummyVars(medv ~ ., data = datos[,cols_reg])
-
-train_dummies = predict(dummies, newdata = train[,cols_reg])
-
-test_dummies = predict(dummies, newdata = test[,cols_reg])
-
-print(dim(train_dummies)); print(dim(test_dummies))
-
-library(glmnet)
-
-x = as.matrix(train_dummies)
-y_train = train$medv
-
-x_test = as.matrix(test_dummies)
-y_test = test$medv
-
-lambdas <- 10^seq(2, -3, by = -.1)
-
-error = 0.5*(sum (x - y_train)^2)+ lambdas/2*(sum(abs(w)^2)) ##regularized error function
-error = 0
--0.5*(sum (x - y_train)^2) = lambdas/2*(sum(abs(w)^2))
-suma_w = lambdas/(-0.5*(sum (x - y_train)^2))
-coef = (abs(suma_w))^2
-
-equation = w0 + w*xn 
 1.3( ) Suppose that we have three coloured boxes r (red), b (blue), and g (green).
 Box r contains 3 apples, 4 oranges, and 3 limes, box b contains 1 apple, 1 orange,
 and 0 limes, and box g contains 3 apples, 3 oranges, and 4 limes. If a box is chosen
@@ -105,10 +38,6 @@ and σ2 equal to zero, verify the results (1.55) and (1.56).
 
 
 
-
-
-
-###PREGUNTAR A QUE SE REFIERE CON MAXIMIZAR RESPECTO DE ???
 
 1.21 ( ) Consider two nonnegative numbers a and b, and show that, if a =< b, then
 a =< sqrt((ab)). 
