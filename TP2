@@ -4,9 +4,12 @@ p(x|µ)=1
 E[x] = µ 
 var[x] = µ(1 − µ)
 Moneda que se da vuelta una vez cual es la probabilidad que sea cara o seca ? 
+A priori se que la moneda posee cierta distribucion sabiendo que todas las monedas son iguales
+
 probability: p∈[0,1]
 u = 1 (exito)
 y = 1 - u (fracaso)
+
 Cada uno es un evento independiente donde  E(x) = u
 E(x) = 0*(1-u) + 1 * u = u
 
@@ -42,7 +45,7 @@ entropia = -3.13
 2.3( ) www In this exercise, we prove that the binomial distribution (2.9) is normalized. 
 First use the definition (2.10) of the number of combinations of m identical
 objects chosen from a total of N to show that
-
+2.17-2.18 en imagene
 .
-2.38 Use the technique of completing the square for the quadratic form in the exponent to derive the results (2.141) and (2.142).
+2.38 Use the technique of completing the square for the quadratic form in the exponent to derive the results (2.141) and (2.142).
 2.42 ( ) Evaluate the mean, variance, and mode of the gamma distribution (2.146)
