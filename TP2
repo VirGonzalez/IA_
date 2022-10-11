@@ -49,4 +49,14 @@ objects chosen from a total of N to show that
 .
 2.38 Use the technique of completing the square for the quadratic form in the exponent to derive the results (2.141) and (2.142).
 
+La inferencia bayesiana en la distribucion gaussiana toma como distribucion prior una normal con parametros mu cero y sigma cero
+
+p(µ) = N( µ|µ0,σ20)
+
+A su vez la distribucion posterior esta dada por p(µ) = N( µ|µN,σ2N). Donde la media del prior es el promedio de todas las posibles
+medias del posterior sobre los posibles datos. Y la varianza posteriori es menor que la varianza priori. 
+
+
+
 2.42 ( ) Evaluate the mean, variance, and mode of the gamma distribution (2.146)
+
