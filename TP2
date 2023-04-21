@@ -1,62 +1,0 @@
-Verify that the Bernoulli distribution (2.2) satisfies the following properties
-
-p(x|µ)=1 
-E[x] = µ 
-var[x] = µ(1 − µ)
-Moneda que se da vuelta una vez cual es la probabilidad que sea cara o seca ? 
-A priori se que la moneda posee cierta distribucion sabiendo que todas las monedas son iguales
-
-probability: p∈[0,1]
-u = 1 (exito)
-y = 1 - u (fracaso)
-
-Cada uno es un evento independiente donde  E(x) = u
-E(x) = 0*(1-u) + 1 * u = u
-
-Mientras la varianza esta dada por u*(1-u) 
-Var(X) = u - u2 = u*(1-u)
-
-Ademas Bernoulli es un caso de distribucion binomial x = 1
-Donde se entiende la entropia como : 
-H(X) =E(I(X)) = - suma (p(x)*log(p(x)).dx
-xn = u
-ln(p(x/u)) = suma{xn ln µ + (1 − xn) ln(1 − µ)} .
-   H(x)       = u*ln(u) + (1-u)*ln(1-u)
-   
-2.2 ( ) The form of the Bernoulli distribution given by (2.2) is not symmetric between the two values of x. In some situations, it will be more convenient to use an
-equivalent formulation for which x ∈ {−1, 1}, in which case the distribution can be
-written
-
-p(x/u) = ((1-u)/2)1-x/2)*((1+u/2)1+x/2)
-
-Show that the distribution (2.261) is normalized, and evaluate its
-mean, variance, and entropy
-
-import scipy.stats
-scipy.stats.norm.pdf(x, 0, 1)
-u = 0
-var = 1
-
-entropia = ln(var-*raiz(2pi*e))
-entropia = ln(1- raiz(17.07))
-entropia = ln(1 - 4.13)
-entropia = -3.13
-
-2.3( ) www In this exercise, we prove that the binomial distribution (2.9) is normalized. 
-First use the definition (2.10) of the number of combinations of m identical
-objects chosen from a total of N to show that
-2.17-2.18 en imagene
-.
-2.38 Use the technique of completing the square for the quadratic form in the exponent to derive the results (2.141) and (2.142).
-
-La inferencia bayesiana en la distribucion gaussiana toma como distribucion prior una normal con parametros mu cero y sigma cero
-
-p(µ) = N( µ|µ0,σ20)
-
-A su vez la distribucion posterior esta dada por p(µ) = N( µ|µN,σ2N). Donde la media del prior es el promedio de todas las posibles
-medias del posterior sobre los posibles datos. Y la varianza posteriori es menor que la varianza priori. 
-
-
-
-2.42 ( ) Evaluate the mean, variance, and mode of the gamma distribution (2.146)
-
